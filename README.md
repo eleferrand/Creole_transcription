@@ -31,22 +31,38 @@ Works with python 3.7 or 3.8
   Run python train.py --data_path /path/to/data
   
   The script will download the xlsr-300 model from huggingface and finetune it with your data
+  
   The data should be built as follow:
   
    --------------------Whatever corpus name
+   
   |
+  
   -------------train
+  
   |
+  
   ---name_1.wav
+  
   ---name_1.txt
+  
   ---name_2.wav
+  
   ---name_2.txt
+  
   ...
+  
   |
+  
   -------------dev
+  
   |
   --- name_1.wav
+  
   --- name_1.txt
+  
   --- name_2.wav
+  
   --- name_2.txt
+  
   ....
