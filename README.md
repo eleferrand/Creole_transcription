@@ -21,7 +21,32 @@ Works on wav files with sample rate=16000 and 1 channel
 
 Works with python 3.7 or 3.8 
 
-Run: python transcribe_long.py --wav /paht/to/wav --model /path/to/model
+### To use an already trained model and make inferences
+  Run: python transcribe_long.py --wav /paht/to/wav --model /path/to/model
+  
+  I could not  upload the model used here as it is too heavy for a git repo (~3Gb)
+  
+### To fine-tuned an xlsr model
 
-I put a model. It is based on the Benchmark and has been finetuned on 60min of French based creoles.
-
+  Run python train.py --data_path /path/to/data
+  
+  The script will download the xlsr-300 model from huggingface and finetune it with your data
+  The data should be built as follow:
+  
+   --------------------Whatever corpus name
+  |
+  -------------train
+  |
+  ---name_1.wav
+  ---name_1.txt
+  ---name_2.wav
+  ---name_2.txt
+  ...
+  |
+  -------------dev
+  |
+  --- name_1.wav
+  --- name_1.txt
+  --- name_2.wav
+  --- name_2.txt
+  ....
